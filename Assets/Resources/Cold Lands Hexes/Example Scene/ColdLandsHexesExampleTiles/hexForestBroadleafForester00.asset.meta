@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 8a1af2a61625e7f429214b64b4821a3d
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 66277
+  packageName: 'Hex Cold Lands: Painted 2D Terrain'
+  packageVersion: 1.1
+  assetPath: Assets/Cold Lands Hexes/Example Scene/ColdLandsHexesExampleTiles/hexForestBroadleafForester00.asset
+  uploadId: 422712

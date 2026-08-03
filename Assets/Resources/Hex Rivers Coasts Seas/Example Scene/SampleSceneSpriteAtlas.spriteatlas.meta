@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 92189a8dfdad4354587df26b48864450
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 196817
+  packageName: 'Hex Rivers, Coasts, Seas: Painted 2D Terrain'
+  packageVersion: 1.0.1
+  assetPath: Assets/Hex Rivers Coasts Seas/Example Scene/SampleSceneSpriteAtlas.spriteatlas
+  uploadId: 444991

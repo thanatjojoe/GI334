@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 33d9a03e3a215eb46b82294504cafaa6
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 66277
+  packageName: 'Hex Cold Lands: Painted 2D Terrain'
+  packageVersion: 1.1
+  assetPath: Assets/Cold Lands Hexes/Example Scene/ColdLandsHexesExampleTiles/hexForestPineSnowCovered01.asset
+  uploadId: 422712

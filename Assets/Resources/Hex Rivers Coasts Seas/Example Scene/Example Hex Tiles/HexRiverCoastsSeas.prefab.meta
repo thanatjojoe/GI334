@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: fd9a7b949a03bf0408d3bcb5ecba2a8e
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 196817
+  packageName: 'Hex Rivers, Coasts, Seas: Painted 2D Terrain'
+  packageVersion: 1.0.1
+  assetPath: Assets/Hex Rivers Coasts Seas/Example Scene/Example Hex Tiles/HexRiverCoastsSeas.prefab
+  uploadId: 444991

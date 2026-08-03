@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: d78d8a92e998e964b83f89adffe318f7
+timeCreated: 1459038042
+licenseType: Store
+TextScriptImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 196817
+  packageName: 'Hex Rivers, Coasts, Seas: Painted 2D Terrain'
+  packageVersion: 1.0.1
+  assetPath: Assets/Hex Rivers Coasts Seas/Tile Samples/samples readme.txt
+  uploadId: 444991

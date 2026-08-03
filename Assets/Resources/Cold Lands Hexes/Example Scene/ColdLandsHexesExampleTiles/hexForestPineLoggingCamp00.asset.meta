@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 1c6b6c724311bdd48afa6c97a6902309
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 66277
+  packageName: 'Hex Cold Lands: Painted 2D Terrain'
+  packageVersion: 1.1
+  assetPath: Assets/Cold Lands Hexes/Example Scene/ColdLandsHexesExampleTiles/hexForestPineLoggingCamp00.asset
+  uploadId: 422712

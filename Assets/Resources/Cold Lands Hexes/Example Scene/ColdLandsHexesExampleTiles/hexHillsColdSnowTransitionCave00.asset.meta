@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 8568e2d313aa00844a3a3aa8dd50de72
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 66277
+  packageName: 'Hex Cold Lands: Painted 2D Terrain'
+  packageVersion: 1.1
+  assetPath: Assets/Cold Lands Hexes/Example Scene/ColdLandsHexesExampleTiles/hexHillsColdSnowTransitionCave00.asset
+  uploadId: 422712

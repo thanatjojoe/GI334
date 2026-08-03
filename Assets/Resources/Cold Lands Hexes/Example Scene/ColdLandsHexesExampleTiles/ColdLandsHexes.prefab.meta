@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 79d62032bc61b264982e8bd74e16f8d3
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 66277
+  packageName: 'Hex Cold Lands: Painted 2D Terrain'
+  packageVersion: 1.1
+  assetPath: Assets/Cold Lands Hexes/Example Scene/ColdLandsHexesExampleTiles/ColdLandsHexes.prefab
+  uploadId: 422712
