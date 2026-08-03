@@ -192,6 +192,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8077421746351634669}
   - component: {fileID: 4732677179946324956}
+  - component: {fileID: 6959606181565270882}
   m_Layer: 0
   m_Name: Hex
   m_TagString: Untagged
@@ -263,6 +264,27 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 2.4, y: 1.4}
   m_EdgeRadius: 0
+--- !u!114 &6959606181565270882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5618453032846955230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a97d6c031b59b944ea956738f85896f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Hex
+  x: 0
+  y: 0
+  pos: {x: 0, y: 0}
+  hexType: 4
+  terrainSprite: {fileID: 3407370715311218205}
+  fogSprite: {fileID: 5916636371596830246}
+  darkSprite: {fileID: 6243746443210648143}
+  hasTown: 0
+  moveCost: 1
 --- !u!1 &8492424661582974349
 GameObject:
   m_ObjectHideFlags: 0
