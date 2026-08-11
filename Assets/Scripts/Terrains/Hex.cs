@@ -37,6 +37,9 @@ public class Hex : MonoBehaviour
     [SerializeField]
     private SpriteRenderer terrainSprite;
 
+    [SerializeField]
+    private SpriteRenderer forestSprite;
+
     [Header("Fog of War")]
     [SerializeField]
     private SpriteRenderer fogSprite;
@@ -47,12 +50,15 @@ public class Hex : MonoBehaviour
     [Header("Town")]
     [SerializeField]
     private bool hasTown;
+    public bool HasTown { get { return hasTown; } set { hasTown = value; } }
 
     [Header("River")]
     private bool hasRiver;
+    public bool HasRiver { get { return hasRiver; } set { hasRiver = value; } }
 
     [Header("Forest")]
     private bool hasForest;
+    public bool HasForest { get { return hasForest; } set { hasForest = value; } }
 
     [SerializeField]
     private int moveCost = 1;
