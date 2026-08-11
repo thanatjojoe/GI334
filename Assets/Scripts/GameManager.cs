@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class GameManager : MonoBehaviour
 {
@@ -44,7 +45,8 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Keyboard.current.iKey.wasPressedThisFrame)
+            ToggleHexText();
     }
 
     private void GenerateAllHexes()
@@ -66,5 +68,13 @@ public class GameManager : MonoBehaviour
                 allHexes[x, y] = hex;
             }
         }
+    }
+
+    private void ToggleHexText()
+    {
+        foreach (Hex hex in allHexes)
+            hex.ToggleAllBasicText(!showingText);
+
+        showingText = !showingText;
     }
 }

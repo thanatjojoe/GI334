@@ -115,7 +115,6 @@ public class Hex : MonoBehaviour
         forestSprite.gameObject.SetActive(true);
         forestSprite.sprite = sprites[i];
     }
-
     public void HexInit(int x, int y, Vector2 pos, GameManager gameMgr, int i)
     {
         this.x = x;
@@ -146,5 +145,9 @@ public class Hex : MonoBehaviour
                 moveCost += 1;
             }
         }
+    }
+    public void ToggleAllBasicText(bool flag)
+    {
+        hexText.gameObject.SetActive(flag);
     }
 }
