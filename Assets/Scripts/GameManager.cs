@@ -39,6 +39,7 @@ public class GameManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        DetermineOcean();
         GenerateAllHexes();
     }
 
@@ -61,8 +62,15 @@ public class GameManager : MonoBehaviour
                 GameObject hexObj = Instantiate(hexPrefab, hexPos, Quaternion.identity, hexParent);
                 Hex hex = hexObj.GetComponent<Hex>();
 
-                int i = Random.Range(1, hexData.Length);
-                hex.HexInit(x, y, hexPos, this, i);//Land
+                int n = Random.Range(oceanEdgeIndex - 3, oceanEdgeIndex + 4);
+
+                if (x >= n)
+                    hex.HexInit(x, y, hexPos, this, 0);//Ocean
+                else
+                {
+                    int i = Random.Range(1, hexData.Length);
+                    hex.HexInit(x, y, hexPos, this, i);//Land
+                }
 
                 //Debug.Log($"{x}:{y}");
                 allHexes[x, y] = hex;
@@ -76,5 +84,11 @@ public class GameManager : MonoBehaviour
             hex.ToggleAllBasicText(!showingText);
 
         showingText = !showingText;
+    }
+
+    private void DetermineOcean()
+    {
+        oceanEdgeIndex = WIDTH - Random.Range(7, 10);
+        //Debug.Log($"min:{oceanEdgeIndex}");
     }
 }
