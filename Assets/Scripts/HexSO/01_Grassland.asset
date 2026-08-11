@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c6e664f78db6cf4ea442f2a32ce0257, type: 3}
+  m_Name: 01_Grassland
+  m_EditorClassIdentifier: Assembly-CSharp::HexData
+  hexName: Grassland
+  type: 1
+  terrainSprites:
+  - {fileID: 21300000, guid: 82da5ddd2fd0a144a9ef7c39b22ab023, type: 3}
+  - {fileID: 21300000, guid: 8c40f6718f2212744b1ef7d480efe531, type: 3}
+  - {fileID: 21300000, guid: 16297603a4211fe40a7cfeb61806efb5, type: 3}
+  - {fileID: 21300000, guid: 81e8acae0f598b94ca10d27eeb620c29, type: 3}
+  forestSprites:
+  - {fileID: 21300000, guid: 9b8e9df5ef6a07d48a613c76c41850ae, type: 3}
+  - {fileID: 21300000, guid: 2f442c6de15f2b94a8da7cf9a57d26ae, type: 3}
+  - {fileID: 21300000, guid: b76e36b9e9c51fc449480118ac30e6c2, type: 3}
+  - {fileID: 21300000, guid: fdb729cbc5cf36049b0db645e8dc042e, type: 3}
+  resourceYield: 
+  moveCost: 1

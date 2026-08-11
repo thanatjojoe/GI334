@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c6e664f78db6cf4ea442f2a32ce0257, type: 3}
+  m_Name: 00_Ocean
+  m_EditorClassIdentifier: Assembly-CSharp::HexData
+  hexName: Ocean
+  type: 0
+  terrainSprites:
+  - {fileID: 21300000, guid: 574425846cafb814fb5c90091cb4ebe9, type: 3}
+  - {fileID: 21300000, guid: 25ae98f9c2333cc4ab828a7835e1212e, type: 3}
+  - {fileID: 21300000, guid: 2146bd22d55757340a0f1e5b04d4c65c, type: 3}
+  - {fileID: 21300000, guid: 37508a4e417246e4291c37a1034246f6, type: 3}
+  forestSprites: []
+  resourceYield: 
+  moveCost: 1
