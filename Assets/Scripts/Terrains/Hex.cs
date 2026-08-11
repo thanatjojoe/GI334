@@ -115,6 +115,7 @@ public class Hex : MonoBehaviour
         forestSprite.gameObject.SetActive(true);
         forestSprite.sprite = sprites[i];
     }
+
     public void HexInit(int x, int y, Vector2 pos, GameManager gameMgr, int i)
     {
         this.x = x;
@@ -131,6 +132,8 @@ public class Hex : MonoBehaviour
         resourceYield = gameMgr.HexData[i].resourceYield;
         moveCost = gameMgr.HexData[i].moveCost;
 
+        SetSortingOrder();
+
         RandomTerrainSprite(terrainSprites);
 
         //85% forest
@@ -146,8 +149,31 @@ public class Hex : MonoBehaviour
             }
         }
     }
+
     public void ToggleAllBasicText(bool flag)
     {
         hexText.gameObject.SetActive(flag);
+    }
+
+    private void SetSortingOrder()
+    {
+        // Sorting Order
+        int baseOrder = y * -10;
+
+        terrainSprite.sortingOrder = baseOrder;
+        forestSprite.sortingOrder = baseOrder + 1;
+        fogSprite.sortingOrder = baseOrder + 5;
+        darkSprite.sortingOrder = baseOrder + 6;
+
+        // Arctic, Hills, Mountains Sorting Order
+        // Just in case want to know which ono is higher than flat
+        switch (hexType)
+        {
+            case HexType.Arctic:
+            case HexType.Hills:
+            case HexType.Mountains:
+                terrainSprite.sortingOrder = baseOrder + 1; //Higher terrain
+                break;
+        }
     }
 }
