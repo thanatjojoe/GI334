@@ -64,6 +64,27 @@ public class Hex : MonoBehaviour
     private int moveCost = 1;
     public int MoveCost { get { return moveCost; } }
 
+    [Header("Terrain")]
+    [SerializeField]
+    private Sprite[] terrainSprites;
+
+    [Header("Forest")]
+    [SerializeField]
+    private Sprite[] forestSprites;
+
+    [SerializeField]
+    private string hexName;
+    public string HexName { get { return hexName; } set { hexName = value; } }
+
+    [SerializeField]
+    private int[] resourceYield;
+    public int[] ResourceYield { get { return resourceYield; } set { resourceYield = value; } }
+
+    [Header("Special")]
+    [SerializeField]
+    private bool specialHex;
+    public bool SpecialHex { get { return specialHex; } set { specialHex = value; } }
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
