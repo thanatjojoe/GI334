@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public enum Nation
 {
@@ -42,6 +43,14 @@ public class Faction : MonoBehaviour
     [SerializeField]
     private Sprite townIcon;
     public Sprite TownIcon { get { return townIcon; } }
+
+    [SerializeField]
+    private List<Town> towns = new List<Town>();
+    public List<Town> Towns { get { return towns; } set { towns = value; } }
+
+    [SerializeField]
+    private List<Unit> units = new List<Unit>();
+    public List<Unit> Units { get { return units; } set { units = value; } }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

@@ -29,6 +29,18 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private int oceanEdgeIndex;
 
+    [SerializeField]
+    private Faction playerFaction;
+    public Faction PlayerFaction { get { return playerFaction; } }
+
+    [SerializeField]
+    private Faction[] factions; //England, France, Spain, Netherland, Portugal
+    public Faction[] Factions { get { return factions; } }
+
+    [SerializeField]
+    private FactionData[] factionData;
+    public FactionData[] FactionData { get { return factionData; } }
+
     public static GameManager instance;
 
     void Awake()
@@ -39,6 +51,8 @@ public class GameManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        SetUpFaction();
+
         DetermineOcean();
         GenerateAllHexes();
     }
@@ -90,5 +104,13 @@ public class GameManager : MonoBehaviour
     {
         oceanEdgeIndex = WIDTH - Random.Range(7, 10);
         //Debug.Log($"min:{oceanEdgeIndex}");
+    }
+
+    private void SetUpFaction()
+    {
+        for (int i = 0; i < factions.Length; i++)
+        {
+            factions[i].FactionInit(factionData[i]);
+        }
     }
 }
