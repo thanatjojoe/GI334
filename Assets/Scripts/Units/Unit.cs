@@ -95,4 +95,22 @@ public class Unit : MonoBehaviour
     {
         
     }
+
+    public void SetupPosition(Hex hex)
+    {
+        curHex = hex;
+        curPos = hex.Pos;
+    }
+
+    public void ToggleBorder(bool flag, Color32 color)
+    {
+        borderSprite.gameObject.SetActive(flag);
+        borderSprite.color = color;
+    }
+
+    public void ShowHideSprite(bool flag)
+    {
+        unitSprite.gameObject.SetActive(flag);
+        flagSprite.gameObject.SetActive(flag);
+    }
 }

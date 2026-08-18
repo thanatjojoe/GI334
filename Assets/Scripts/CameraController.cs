@@ -62,4 +62,9 @@ public class CameraController : MonoBehaviour
         cam.orthographicSize += zoomModifier * zoomSpeed;
         cam.orthographicSize = Mathf.Clamp(cam.orthographicSize, 4, 10);
     }
+
+    public void MoveCamera(Vector3 pos)
+    {
+        transform.position = new Vector3(pos.x, pos.y, -10f);
+    }
 }
