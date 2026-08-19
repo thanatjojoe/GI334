@@ -545,7 +545,7 @@ MonoBehaviour:
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
-  m_ApplyToSortingLayers: 00000000aba924d0971f1ebb
+  m_ApplyToSortingLayers: 00000000aba924d0971f1ebb2d74fdd8
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -1180,9 +1180,20 @@ MonoBehaviour:
   factionData:
   - {fileID: 11400000, guid: 3121f396706cea149998e23b76f71e8e, type: 2}
   - {fileID: 11400000, guid: 82bf968be29fad64e8d8d879bc7e50f7, type: 2}
+  - {fileID: 11400000, guid: 9494655ab541b354fb666769a1b301bd, type: 2}
   - {fileID: 11400000, guid: f09dcfbc7ce8142468ffe391c9431ce8, type: 2}
   - {fileID: 11400000, guid: 54fcc94b89c11434dac7a23720b68bc0, type: 2}
-  - {fileID: 11400000, guid: 9494655ab541b354fb666769a1b301bd, type: 2}
+  landUnitPrefab: {fileID: 1163532693369091168, guid: 03ce1fb068bb3f94daefe97364f00e81, type: 3}
+  navalUnitPrefab: {fileID: 1163532693369091168, guid: ad3d6a879412b964db0589cd6e9c4d73, type: 3}
+  townPrefab: {fileID: 0}
+  curUnit: {fileID: 0}
+  curAiUnit: {fileID: 0}
+  landUnitData:
+  - {fileID: 11400000, guid: 91d8c832f1b2f364098983b436762388, type: 2}
+  - {fileID: 11400000, guid: 2fbe4db458053ef4697c5fb2a99b671d, type: 2}
+  navalUnitData:
+  - {fileID: 11400000, guid: c2b629827c9821d4185b71e921d8e2b9, type: 2}
+  - {fileID: 11400000, guid: 7a2216c04fddf454f9d2e84a0c848308, type: 2}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
