@@ -176,4 +176,20 @@ public class Hex : MonoBehaviour
                 break;
         }
     }
+
+    private void ToggleFog(bool flag)
+    {
+        fogSprite.gameObject.SetActive(flag);
+    }
+
+    private void ToggleDark(bool flag)
+    {
+        darkSprite.gameObject.SetActive(flag);
+    }
+
+    public void DiscoverHex()
+    {
+        ToggleFog(false);
+        ToggleDark(false);
+    }
 }

@@ -545,7 +545,7 @@ MonoBehaviour:
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
-  m_ApplyToSortingLayers: 00000000aba924d0971f1ebb2d74fdd8
+  m_ApplyToSortingLayers: 00000000aba924d02d74fdd895a125d6971f1ebb
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -690,7 +690,7 @@ Grid:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1080899237}
   m_Enabled: 1
-  m_CellSize: {x: 2.6, y: 2.6, z: 1}
+  m_CellSize: {x: 2.55, y: 2.55, z: 1}
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 1
   m_CellSwizzle: 0
