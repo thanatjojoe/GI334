@@ -192,4 +192,10 @@ public class Hex : MonoBehaviour
         ToggleFog(false);
         ToggleDark(false);
     }
+
+    public void SeenHex()
+    {
+        ToggleFog(true);
+        ToggleDark(false);
+    }
 }
