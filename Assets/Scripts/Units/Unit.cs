@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public enum UnitType
 {
@@ -15,7 +16,7 @@ public enum UnitStatus
     Building
 }
 
-public class Unit : MonoBehaviour
+public class Unit : MonoBehaviour, IPointerClickHandler
 {
     [SerializeField]
     protected string unitName;
@@ -91,9 +92,12 @@ public class Unit : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    protected virtual void Update()
     {
-        
+        if (isMoving == true)
+        {
+            MoveToHex();
+        }
     }
 
     public void SetupPosition(Hex hex)
@@ -112,5 +116,75 @@ public class Unit : MonoBehaviour
     {
         unitSprite.gameObject.SetActive(flag);
         flagSprite.gameObject.SetActive(flag);
+    }
+
+    public void SetUnitToFrontLayerOrder()
+    {
+        unitSprite.sortingOrder = 5;
+        flagSprite.sortingOrder = 6;
+    }
+
+    public void SetUnitToNormalLayerOrder()
+    {
+        unitSprite.sortingOrder = 2;
+        flagSprite.sortingOrder = 3;
+    }
+
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        //Debug.Log("Mouse Click");
+        if (faction == gameMgr.PlayerFaction)
+        {
+            gameMgr.SelectPlayerUnit(this);
+        }
+    }
+
+    public virtual void PrepareMoveToHex(Hex target) //Begin to move by RC or AI auto movement
+    {
+        //Debug.Log($"MoveCost-{target.MoveCost}");
+        //Debug.Log($"UnitMovementP-{movePoint}");
+
+        if (target.MoveCost > movePoint)
+            return;
+
+        isMoving = true;
+        targetHex = target;
+        //Debug.Log($"Target Pos:{targetHex.transform.position.x},{targetHex.transform.position.y}");
+
+        if (faction == gameMgr.PlayerFaction)
+            gameMgr.LeaveSeenFogAroundUnit(this);
+    }
+
+    protected virtual void StayOnHex(Hex targetHex)
+    {
+        isMoving = false;
+        curHex = targetHex;
+        targetHex = null;
+        transform.position = curHex.transform.position; //confirm position to match this hex
+
+        if (faction == gameMgr.PlayerFaction)
+        {
+            gameMgr.ClearDarkFogAroundUnit(this);
+            ToggleBorder(true, Color.green);
+        }
+    }
+
+    private void MoveToHex()
+    {
+        ToggleBorder(false, Color.green);
+        //Debug.Log($"CurPos-{curPos.x}:{curPos.y}");
+        //Debug.Log(targetHex);
+
+        transform.position = Vector2.MoveTowards(curPos, targetHex.transform.position, 4 * Time.deltaTime);
+        curPos = transform.position;
+
+        if (curPos == targetHex.Pos) //Reach Destination
+        {
+            movePoint -= targetHex.MoveCost;
+            StayOnHex(targetHex);
+
+            if (faction == gameMgr.PlayerFaction)
+                gameMgr.ClearDarkFogAroundEveryUnit(faction);
+        }
     }
 }

@@ -396,6 +396,7 @@ MonoBehaviour:
   resourceYield: 
   specialHex: 0
   hexText: {fileID: 4421216523774771260}
+  visible: 0
 --- !u!1 &7447183743169214861
 GameObject:
   m_ObjectHideFlags: 0
@@ -504,7 +505,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &218357054601642159
 RectTransform:
   m_ObjectHideFlags: 0
@@ -561,8 +562,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 0.81991124, b: 0.2471698, a: 1}
+    rgba: 4294951676
+  m_fontColor: {r: 0.98898166, g: 0.759434, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:

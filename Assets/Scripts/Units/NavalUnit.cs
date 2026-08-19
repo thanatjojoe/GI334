@@ -31,18 +31,6 @@ public class NavalUnit : Unit
     private GameObject passengerParent;
     public GameObject PassengerParent { get { return passengerParent; } }
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void UnitInit(GameManager gameMgr, Faction fact, NavalUnitData data)
     {
         base.gameMgr = gameMgr;
@@ -59,5 +47,15 @@ public class NavalUnit : Unit
         navalUnitType = data.navalUnitType;
         armed = data.armed;
         cargoHoldNum = data.cargoHoldNum;
+    }
+
+    public override void PrepareMoveToHex(Hex targetHex) //Begin to move by RC or AI auto movement
+    {
+        base.PrepareMoveToHex(targetHex);
+
+        if (targetHex.HexType != HexType.Ocean)
+        {
+            StayOnHex(curHex);
+        }
     }
 }

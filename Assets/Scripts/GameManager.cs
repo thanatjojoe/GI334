@@ -228,4 +228,34 @@ public class GameManager : MonoBehaviour
         FocusPlayerUnit(curUnit);
         //Debug.Log(curUnit);
     }
+
+    public bool CheckIfHexIsAdjacent(Hex centerHex, Hex targetHex)
+    {
+        List<Hex> adjHexes = HexCalculator.GetHexAround(allHexes, centerHex);
+
+        return (adjHexes.Contains(targetHex)) ? true : false;
+    }
+
+    public void LeaveSeenFogAroundUnit(Unit unit)
+    {
+        unit.CurHex.SeenHex();
+
+        List<Hex> adjHexes = HexCalculator.GetHexAround(allHexes, unit.CurHex);
+
+        //Debug.Log(adjHexes.Count);
+
+        foreach (Hex hex in adjHexes)
+        {
+            hex.SeenHex();
+        }
+    }
+
+    public void ClearDarkFogAroundEveryUnit(Faction faction)
+    {
+        foreach (Unit unit in faction.Units)
+        {
+            //Debug.Log($"{unit.UnitName} discovers:");
+            ClearDarkFogAroundUnit(unit);
+        }
+    }
 }
