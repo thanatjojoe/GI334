@@ -1208,6 +1208,7 @@ MonoBehaviour:
   landUnitData:
   - {fileID: 11400000, guid: 91d8c832f1b2f364098983b436762388, type: 2}
   - {fileID: 11400000, guid: 2fbe4db458053ef4697c5fb2a99b671d, type: 2}
+  - {fileID: 11400000, guid: f74c7a7c9bed7d74db0ba2de57160977, type: 2}
   navalUnitData:
   - {fileID: 11400000, guid: c2b629827c9821d4185b71e921d8e2b9, type: 2}
   - {fileID: 11400000, guid: 7a2216c04fddf454f9d2e84a0c848308, type: 2}

@@ -58,4 +58,15 @@ public class NavalUnit : Unit
             StayOnHex(curHex);
         }
     }
+
+    protected override void StayOnHex(Hex hex)
+    {
+        base.StayOnHex(hex);
+
+        foreach (LandUnit unit in passengers)
+        {
+            unit.CurHex = hex;
+            unit.CurPos = hex.Pos;
+        }
+    }
 }

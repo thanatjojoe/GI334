@@ -83,6 +83,7 @@ public class GameManager : MonoBehaviour
         GenerateAllHexes();
 
         GenerateAllEuropeanShips();
+        GenerateAllEuropeanExplorerUnits();
     }
 
     // Update is called once per frame
@@ -90,6 +91,9 @@ public class GameManager : MonoBehaviour
     {
         if (Keyboard.current.iKey.wasPressedThisFrame)
             ToggleHexText();
+
+        if (Keyboard.current.tabKey.wasPressedThisFrame)
+            SelectNextPlayerUnit();
     }
 
     private void GenerateAllHexes()
@@ -144,7 +148,7 @@ public class GameManager : MonoBehaviour
 
     public void SelectPlayerFaction()
     {
-        int i = 0; //England
+        int i = 3; //Netherland
         playerFaction = factions[i];
     }
 
@@ -215,12 +219,14 @@ public class GameManager : MonoBehaviour
         if (curUnit != null)
         {
             ClearToggleBorder(curUnit);
+            curUnit.SetUnitToNormalLayerOrder();
 
             if (curUnit.UnitStatus == UnitStatus.OnBoard)
                 curUnit.gameObject.SetActive(false);
         }
 
         unit.gameObject.SetActive(true);
+        unit.SetUnitToFrontLayerOrder();
 
         curUnit = unit;
         //UpdateCanGoHex();
@@ -257,5 +263,58 @@ public class GameManager : MonoBehaviour
             //Debug.Log($"{unit.UnitName} discovers:");
             ClearDarkFogAroundUnit(unit);
         }
+    }
+
+    private void GeneratePassengerUnit(Faction faction, Hex hex, int unitId, bool show, NavalUnit ship)//ship passengers
+    {
+        GameObject obj = Instantiate(landUnitPrefab, hex.Pos, Quaternion.identity, ship.PassengerParent.transform);
+        LandUnit unit = obj.GetComponent<LandUnit>();
+
+        unit.UnitInit(this, faction, landUnitData[unitId]);
+        unit.SetupPosition(hex);
+
+        unit.UnitStatus = UnitStatus.OnBoard;
+        obj.SetActive(false);
+
+        faction.Units.Add(unit);
+        ship.Passengers.Add(unit);
+    }
+
+    private void GenerateAllEuropeanExplorerUnits()
+    {
+        for (int i = 0; i < 5; i++)
+        {
+            NavalUnit firstShip = factions[i].Units[0].gameObject.GetComponent<NavalUnit>();
+
+            GeneratePassengerUnit(factions[i], firstShip.CurHex, 1, false, firstShip); //Veteran Soldiers
+            GeneratePassengerUnit(factions[i], firstShip.CurHex, 2, false, firstShip); //Hardy Pioneers
+        }
+    }
+
+    private int FindIndexOfCurUnit()
+    {
+        if (playerFaction.Units.Contains(curUnit))
+        {
+            for (int i = 0; i < playerFaction.Units.Count; i++)
+            {
+                if (curUnit == playerFaction.Units[i])
+                    return i;
+            }
+            return -1;
+        }
+        else
+            return -1;
+    }
+
+    private void SelectNextPlayerUnit()
+    {
+        int i = FindIndexOfCurUnit();
+        i++;
+
+        if (i >= playerFaction.Units.Count)
+            i = 0;
+
+        SelectPlayerUnit(playerFaction.Units[i]);
+        CameraController.instance.MoveCamera(curUnit.transform.position);
     }
 }
