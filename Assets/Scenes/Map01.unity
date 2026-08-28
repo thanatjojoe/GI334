@@ -562,7 +562,7 @@ MonoBehaviour:
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
-  m_ApplyToSortingLayers: 00000000aba924d02d74fdd895a125d6971f1ebb
+  m_ApplyToSortingLayers: 00000000aba924d02d74fdd895a125d6971f1ebbe37806a6
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -1202,7 +1202,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 54fcc94b89c11434dac7a23720b68bc0, type: 2}
   landUnitPrefab: {fileID: 1163532693369091168, guid: 03ce1fb068bb3f94daefe97364f00e81, type: 3}
   navalUnitPrefab: {fileID: 1163532693369091168, guid: ad3d6a879412b964db0589cd6e9c4d73, type: 3}
-  townPrefab: {fileID: 0}
+  townPrefab: {fileID: 1163532693369091168, guid: 07a4a9f33908e134ea5f3d62ae421295, type: 3}
   curUnit: {fileID: 0}
   curAiUnit: {fileID: 0}
   landUnitData:

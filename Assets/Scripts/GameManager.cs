@@ -274,6 +274,7 @@ public class GameManager : MonoBehaviour
         unit.SetupPosition(hex);
 
         unit.UnitStatus = UnitStatus.OnBoard;
+        unit.TransportShip = ship;
         obj.SetActive(false);
 
         faction.Units.Add(unit);

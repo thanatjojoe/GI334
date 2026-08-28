@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public enum LandUnitType
 {
@@ -46,6 +47,10 @@ public class LandUnit : Unit
     private bool hasHorse = false;
     public bool HasHorse { get { return hasHorse; } set { hasHorse = value; } }
 
+    [SerializeField]
+    private NavalUnit transportShip;
+    public NavalUnit TransportShip { get { return transportShip; } set { transportShip = value; } }
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -53,9 +58,21 @@ public class LandUnit : Unit
     }
 
     // Update is called once per frame
-    void Update()
+    protected override void Update()
     {
-        
+        base.Update();
+
+        if (Keyboard.current.bKey.wasPressedThisFrame)
+        {
+            if (this == gameMgr.CurUnit)
+                BuildSettlement();
+        }
+
+        if (Keyboard.current.pKey.wasPressedThisFrame)
+        {
+            if (this == gameMgr.CurUnit)
+                ClearingLand();
+        }
     }
 
     public void UnitInit(GameManager gameMgr, Faction fact, LandUnitData data)
@@ -85,5 +102,71 @@ public class LandUnit : Unit
         hasHorse = data.hasHorse;
         if (hasHorse)
             horseNum = 50;
+    }
+
+    private void MakeLandFall()
+    {
+        unitStatus = UnitStatus.None;
+        gameObject.transform.parent = faction.UnitParent.transform;
+        transportShip.Passengers.Remove(this);
+        transportShip = null;
+    }
+
+    public void ClearingLand()
+    {
+        if (curHex.HexType == HexType.Ocean || curHex.HexType == HexType.Mountains
+            || curHex.HexType == HexType.Hills || !curHex.HasForest)
+        {
+            //warning has to be cleared land
+            Debug.Log("Must be on Forest");
+        }
+        else if (toolsNum < 20)
+        {
+            //warning not enough tools
+            Debug.Log("Not enough tools");
+        }
+        else
+        {
+            unitStatus = UnitStatus.Clearing;
+            toolsNum -= 20;
+        }
+    }
+
+    public void BuildSettlement()
+    {
+        Debug.Log("Build Settlement");
+
+        if (curHex.HexType == HexType.Ocean || curHex.HexType == HexType.Mountains || curHex.HasForest)
+        {
+            //warning has to be cleared land
+            Debug.Log("Must be on Cleared Land");
+        }
+        else if (toolsNum < 20)
+        {
+            //warning not enough tools
+            Debug.Log("Not enough tools");
+        }
+        else
+        {
+            unitStatus = UnitStatus.Building;
+            toolsNum -= 20;
+        }
+    }
+
+    public override void PrepareMoveToHex(Hex targetHex) //Begin to move by RC or AI auto movement
+    {
+        //Debug.Log($"{unitName}:walks");
+
+        if (targetHex.HexType != HexType.Ocean)
+        {
+            base.PrepareMoveToHex(targetHex);
+
+            if (unitStatus == UnitStatus.OnBoard)
+                MakeLandFall();
+        }
+        else
+        {
+            StayOnHex(curHex);
+        }
     }
 }
