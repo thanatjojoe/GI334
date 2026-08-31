@@ -362,6 +362,9 @@ public class GameManager : MonoBehaviour
                 if (HexCalculator.CheckIfHexAroundHasTown(allHexes, hex))
                     continue;
 
+                if (hex.HexType == HexType.Mountains || hex.HexType == HexType.Ocean)
+                    continue;
+
                 if (hex.HexType != HexType.Ocean)
                     GenerateTown(factions[i], hex);
             }
