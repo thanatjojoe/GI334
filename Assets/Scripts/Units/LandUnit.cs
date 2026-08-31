@@ -114,6 +114,9 @@ public class LandUnit : Unit
 
     public void ClearingLand()
     {
+        if (unitStatus == UnitStatus.Clearing)
+            return;
+
         if (curHex.HexType == HexType.Ocean || curHex.HexType == HexType.Mountains
             || curHex.HexType == HexType.Hills || !curHex.HasForest)
         {
@@ -134,6 +137,9 @@ public class LandUnit : Unit
 
     public void BuildSettlement()
     {
+        if (unitStatus == UnitStatus.Building || curHex.HasTown)
+            return;
+
         Debug.Log("Build Settlement");
 
         if (curHex.HexType == HexType.Ocean || curHex.HexType == HexType.Mountains || curHex.HasForest)

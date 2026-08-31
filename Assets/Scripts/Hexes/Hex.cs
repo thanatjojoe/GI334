@@ -218,4 +218,10 @@ public class Hex : MonoBehaviour, IPointerClickHandler
             }
         }
     }
+
+    public void ClearForest()
+    {
+        hasForest = false;
+        forestSprite.gameObject.SetActive(false);
+    }
 }

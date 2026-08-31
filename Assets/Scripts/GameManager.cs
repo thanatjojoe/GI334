@@ -107,6 +107,9 @@ public class GameManager : MonoBehaviour
 
         if (Keyboard.current.tabKey.wasPressedThisFrame)
             SelectNextPlayerUnit();
+
+        if (Keyboard.current.backspaceKey.wasPressedThisFrame)
+            Endturn();
     }
 
     private void GenerateAllHexes()
@@ -392,5 +395,67 @@ public class GameManager : MonoBehaviour
                 GenerateLandUnit(factions[i], town.CurHex, 4, false); //Tropical Indian
             }
         }
+    }
+
+    public void CheckUnitClearingLand(Faction faction, Unit unit)
+    {
+        if (unit.UnitStatus == UnitStatus.Clearing)
+        {
+            unit.CurHex.ClearForest();
+            unit.UnitStatus = UnitStatus.None;
+        }
+    }
+
+    public void CheckUnitBuildingSettlement(Faction faction, Unit unit)
+    {
+        if (unit.UnitStatus == UnitStatus.Building)
+        {
+            GenerateTown(faction, unit.CurHex);
+            unit.UnitStatus = UnitStatus.None;
+        }
+    }
+
+    public void ResetAllUnits(Faction faction)
+    {
+        foreach (Unit unit in faction.Units)
+        {
+            CheckUnitClearingLand(faction, unit);
+            CheckUnitBuildingSettlement(faction, unit);
+            unit.MovePoint = unit.MovePointMax;
+        }
+    }
+
+    public void SelectAiUnit(Unit unit)
+    {
+        //Debug.Log($"{unit.Faction}:{unit.UnitName}");
+
+        if (curUnit != null)
+            ClearToggleBorder(curUnit);
+
+        curAiUnit = unit;
+        //UpdateCanGoHex();
+
+        FocusPlayerUnit(curAiUnit);
+        //Debug.Log($"{curAiUnit.Faction}:{curAiUnit.UnitName}");
+    }
+
+    public void SelectPlayerFirstUnit()
+    {
+        if (playerFaction.Units.Count > 0)
+        {
+            Unit firstUnit = playerFaction.Units[0];
+            SelectPlayerUnit(firstUnit);
+            CameraController.instance.MoveCamera(firstUnit.CurPos);
+        }
+    }
+
+    public void Endturn()
+    {
+        if (curUnit != null)
+            curUnit.ToggleBorder(false, Color.green);
+
+        Debug.Log("End Turn");
+        playerTurn = false;
+        AIManager.instance.StartAITurn();
     }
 }
