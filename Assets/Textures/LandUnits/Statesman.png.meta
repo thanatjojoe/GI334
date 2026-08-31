@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 9abc7d40c83d52546ab767348ad428a1
+guid: 7309f4b3993ceed43aeb96e640e10538
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2337961310298916287
-    second: Soldiers_0
+      213: -6723991864033456046
+    second: Statesman_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Soldiers_0
+      name: Statesman_0
       rect:
         serializedVersion: 2
-        x: 185
-        y: 106
-        width: 583
-        height: 801
+        x: 251
+        y: 113
+        width: 299
+        height: 775
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 14ab6094394ed8fd0800000000000000
-      internalID: -2337961310298916287
+      spriteID: 2505baf56059fa2a0800000000000000
+      internalID: -6723991864033456046
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Soldiers_0: -2337961310298916287
+      Statesman_0: -6723991864033456046
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 9abc7d40c83d52546ab767348ad428a1
+guid: 62f0933e6036edb43a94b5f34f51b8a1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2337961310298916287
-    second: Soldiers_0
+      213: 1944592574858670343
+    second: Blacksmith_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Soldiers_0
+      name: Blacksmith_0
       rect:
         serializedVersion: 2
-        x: 185
-        y: 106
-        width: 583
-        height: 801
+        x: 149
+        y: 59
+        width: 477
+        height: 799
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 14ab6094394ed8fd0800000000000000
-      internalID: -2337961310298916287
+      spriteID: 7013059d4a49cfa10800000000000000
+      internalID: 1944592574858670343
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Soldiers_0: -2337961310298916287
+      Blacksmith_0: 1944592574858670343
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 9abc7d40c83d52546ab767348ad428a1
+guid: a4d0c2c5e9d0a174d960ca4f49f712ab
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2337961310298916287
-    second: Soldiers_0
+      213: 7208044432832331098
+    second: OreMiners_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Soldiers_0
+      name: OreMiners_0
       rect:
         serializedVersion: 2
-        x: 185
-        y: 106
-        width: 583
-        height: 801
+        x: 25
+        y: 68
+        width: 587
+        height: 852
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 14ab6094394ed8fd0800000000000000
-      internalID: -2337961310298916287
+      spriteID: a5df338c83e180460800000000000000
+      internalID: 7208044432832331098
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Soldiers_0: -2337961310298916287
+      OreMiners_0: 7208044432832331098
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

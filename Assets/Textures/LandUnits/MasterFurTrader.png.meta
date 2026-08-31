@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 9abc7d40c83d52546ab767348ad428a1
+guid: 73d359bf4a0f225478efd5c5b4757186
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2337961310298916287
-    second: Soldiers_0
+      213: -2795203362306852591
+    second: MasterFurTrader_0
+  - first:
+      213: -5114383997991776976
+    second: MasterFurTrader_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +103,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Soldiers_0
+      name: MasterFurTrader_0
       rect:
         serializedVersion: 2
-        x: 185
-        y: 106
-        width: 583
-        height: 801
+        x: 114
+        y: 100
+        width: 463
+        height: 789
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +118,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 14ab6094394ed8fd0800000000000000
-      internalID: -2337961310298916287
+      spriteID: 119f8b20a517539d0800000000000000
+      internalID: -2795203362306852591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MasterFurTrader_1
+      rect:
+        serializedVersion: 2
+        x: 602
+        y: 164
+        width: 75
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03d02cad9de0609b0800000000000000
+      internalID: -5114383997991776976
       vertices: []
       indices: 
       edges: []
@@ -135,7 +160,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Soldiers_0: -2337961310298916287
+      MasterFurTrader_0: -2795203362306852591
+      MasterFurTrader_1: -5114383997991776976
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 9abc7d40c83d52546ab767348ad428a1
+guid: 6ff261bb831a41f42bcc08c3df42e3f5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2337961310298916287
-    second: Soldiers_0
+      213: -5990557568622653970
+    second: FurTrapper_0
+  - first:
+      213: 5365559552925150064
+    second: FurTrapper_1
+  - first:
+      213: 714786007343848646
+    second: FurTrapper_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +106,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Soldiers_0
+      name: FurTrapper_0
       rect:
         serializedVersion: 2
-        x: 185
-        y: 106
-        width: 583
-        height: 801
+        x: 121
+        y: 94
+        width: 453
+        height: 792
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +121,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 14ab6094394ed8fd0800000000000000
-      internalID: -2337961310298916287
+      spriteID: eed08b371a34ddca0800000000000000
+      internalID: -5990557568622653970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FurTrapper_1
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 463
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07bae454cfb467a40800000000000000
+      internalID: 5365559552925150064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FurTrapper_2
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 449
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cc562a261e6be900800000000000000
+      internalID: 714786007343848646
       vertices: []
       indices: 
       edges: []
@@ -135,7 +185,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Soldiers_0: -2337961310298916287
+      FurTrapper_0: -5990557568622653970
+      FurTrapper_1: 5365559552925150064
+      FurTrapper_2: 714786007343848646
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
