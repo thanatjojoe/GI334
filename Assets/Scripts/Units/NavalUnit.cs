@@ -22,6 +22,7 @@ public class NavalUnit : Unit
 
     [SerializeField]
     private int cargoHoldNum;
+    public int CargoHoldNum { get { return cargoHoldNum; } }
 
     [SerializeField]
     private List<LandUnit> passengers = new List<LandUnit>();
@@ -63,10 +64,15 @@ public class NavalUnit : Unit
     {
         base.StayOnHex(hex);
 
-        foreach (LandUnit unit in passengers)
+        foreach (LandUnit passenger in passengers)
         {
-            unit.CurHex = hex;
-            unit.CurPos = hex.Pos;
+            //Remove passenger from old ocean hex
+            passenger.CurHex.UnitsInHex.Remove(passenger);
+            //Add passenger to new ocean hex
+            hex.UnitsInHex.Add(passenger);
+
+            passenger.CurHex = hex;
+            passenger.CurPos = hex.Pos;
         }
     }
 }

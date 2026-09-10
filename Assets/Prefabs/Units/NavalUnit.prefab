@@ -187,7 +187,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NavalUnit
   unitName: 
-  unitType: 0
+  unitType: 1
   unitStatus: 0
   strength: 0
   movePoint: 0

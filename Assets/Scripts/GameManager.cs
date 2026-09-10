@@ -458,4 +458,18 @@ public class GameManager : MonoBehaviour
         playerTurn = false;
         AIManager.instance.StartAITurn();
     }
+
+    public NavalUnit CheckIfHexHasOurShipToBoard(Hex hex)
+    {
+        foreach (Unit unit in hex.UnitsInHex)
+        {
+            if (unit.UnitType == UnitType.Naval && unit.Faction == playerFaction)
+            {
+                NavalUnit ship = (NavalUnit)unit;
+                if (ship.Passengers.Count < ship.CargoHoldNum)
+                    return ship;
+            }
+        }
+        return null;
+    }
 }

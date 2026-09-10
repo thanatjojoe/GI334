@@ -170,9 +170,35 @@ public class LandUnit : Unit
             if (unitStatus == UnitStatus.OnBoard)
                 MakeLandFall();
         }
+        else if (gameMgr.CheckIfHexHasOurShipToBoard(targetHex))
+        {
+            base.PrepareMoveToHex(targetHex);
+        }
         else
         {
             StayOnHex(curHex);
         }
+    }
+
+    public void BoardingShip(NavalUnit ship)
+    {
+        ship.Passengers.Add(this);
+        transportShip = ship;
+        gameObject.transform.parent = ship.PassengerParent.transform;
+        unitStatus = UnitStatus.OnBoard;
+    }
+
+    protected override void StayOnHex(Hex hex)
+    {
+        base.StayOnHex(hex);
+
+        if (hex.HexType != HexType.Ocean)
+            return;
+
+        //Check again if this ship can be boarded
+        NavalUnit ship = gameMgr.CheckIfHexHasOurShipToBoard(hex);
+
+        if (ship != null)
+            BoardingShip(ship);
     }
 }

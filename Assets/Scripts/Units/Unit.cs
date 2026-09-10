@@ -13,7 +13,9 @@ public enum UnitStatus
     OnBoard,
     Fortified,
     Clearing,
-    Building
+    Building,
+    WorkInField,
+    WorkInTown
 }
 
 public class Unit : MonoBehaviour, IPointerClickHandler
@@ -73,6 +75,7 @@ public class Unit : MonoBehaviour, IPointerClickHandler
     [Header("Unit")]
     [SerializeField]
     protected SpriteRenderer unitSprite;
+    public SpriteRenderer UnitSprite { get { return unitSprite; } }
 
     [Header("Flag")]
     [SerializeField]
@@ -133,9 +136,23 @@ public class Unit : MonoBehaviour, IPointerClickHandler
     public void OnPointerClick(PointerEventData eventData)
     {
         //Debug.Log("Mouse Click");
-        if (faction == gameMgr.PlayerFaction)
+        if (eventData.button == PointerEventData.InputButton.Left)
         {
-            gameMgr.SelectPlayerUnit(this);
+            if (faction == gameMgr.PlayerFaction)
+            {
+                gameMgr.SelectPlayerUnit(this);
+            }
+        }
+
+        if (eventData.button == PointerEventData.InputButton.Right)
+        {
+            if (gameMgr.CheckIfHexIsAdjacent(gameMgr.CurUnit.CurHex, curHex))
+            {
+                if (faction == gameMgr.PlayerFaction)//same side unit
+                    gameMgr.CurUnit.PrepareMoveToHex(curHex);
+                else//diff side unit
+                    Debug.Log($"{gameMgr.CurUnit} Attacks {unitName}");
+            }
         }
     }
 
@@ -157,10 +174,16 @@ public class Unit : MonoBehaviour, IPointerClickHandler
 
     protected virtual void StayOnHex(Hex targetHex)
     {
+        //Old Hex
+        curHex.UnitsInHex.Remove(this);
+
         isMoving = false;
         curHex = targetHex;
         targetHex = null;
         transform.position = curHex.transform.position; //confirm position to match this hex
+
+        //New Hex
+        curHex.UnitsInHex.Add(this);
 
         if (faction == gameMgr.PlayerFaction)
         {
