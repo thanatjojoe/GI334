@@ -21,6 +21,7 @@ public class Town : MonoBehaviour
     [Header("Town")]
     [SerializeField]
     protected SpriteRenderer townSprite;
+    public SpriteRenderer TownSprite { get { return townSprite; } }
 
     [Header("Border")]
     [SerializeField]

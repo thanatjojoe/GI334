@@ -78,6 +78,10 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private int nativeTownNum;
 
+    [SerializeField]
+    private Town curTown;
+    public Town CurTown { get { return curTown; } set { curTown = value; } }
+
     public static GameManager instance;
 
     void Awake()
