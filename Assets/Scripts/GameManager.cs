@@ -350,6 +350,9 @@ public class GameManager : MonoBehaviour
         faction.Towns.Add(town);
 
         curHex.HasTown = true;
+        curHex.Town = town;
+
+        curTown = town;
     }
 
     private void GenerateAllNativeTowns()
@@ -475,5 +478,14 @@ public class GameManager : MonoBehaviour
             }
         }
         return null;
+    }
+
+    public void SetupCurrentTown(Town town)//setup town panel
+    {
+        curTown = town;
+        Hex[] aroundHexes = HexCalculator.GetHexAroundToArray(allHexes, curTown.CurHex);
+
+        UIManager.instance.ToggleTownPanel(true);
+        UIManager.instance.SetupCurrentTown(curTown.CurHex, aroundHexes);
     }
 }

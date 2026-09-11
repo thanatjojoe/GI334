@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 
 public class UnitDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
@@ -46,7 +47,7 @@ public class UnitDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
 
     public void OnDrag(PointerEventData eventData)
     {
-        transform.position = Input.mousePosition;
+        transform.position = Mouse.current.position.value;
     }
 
     public void OnEndDrag(PointerEventData eventData)

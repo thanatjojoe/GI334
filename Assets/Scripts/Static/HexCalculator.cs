@@ -94,4 +94,16 @@ public static class HexCalculator
         }
         return false;
     }
+
+    public static Hex[] GetHexAroundToArray(Hex[,] hexes, Hex center)
+    {
+        Hex[] hexArray = new Hex[6];
+
+        for (int i = 0; i < 6; i++)
+        {
+            Hex hex = FindHexByDir(center, (HexDirection)i, hexes);
+            hexArray[i] = hex;
+        }
+        return hexArray;
+    }
 }

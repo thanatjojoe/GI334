@@ -119,4 +119,11 @@ public class UIManager : MonoBehaviour
         }
         townPanel.SetActive(show);
     }
+
+    public void SetupCurrentTown(Hex curHex, Hex[] aroundHexes)
+    {
+        SetupHexSlots(curHex, aroundHexes);
+        SetupUnitDragOutsideTown(curHex);
+        SetupUnitDragWorkingInTerrain();
+    }
 }
