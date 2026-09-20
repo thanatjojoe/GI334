@@ -60,6 +60,10 @@ public class Faction : MonoBehaviour
     private List<Unit> units = new List<Unit>();
     public List<Unit> Units { get { return units; } set { units = value; } }
 
+    [SerializeField]
+    private bool isTropicalNatives;
+    public bool IsTropicalNatives { get { return isTropicalNatives; } }
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -80,5 +84,6 @@ public class Faction : MonoBehaviour
         shieldIcon = data.shieldIcon;
         unitIcon = data.unitIcon;
         townIcon = data.townIcon;
+        isTropicalNatives = data.isTropicalNatives;
     }
 }

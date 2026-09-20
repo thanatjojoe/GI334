@@ -73,15 +73,6 @@ public class LandUnit : Unit
             if (this == gameMgr.CurUnit)
                 ClearingLand();
         }
-
-        if (Keyboard.current.enterKey.wasPressedThisFrame)
-        {
-            if (this == gameMgr.CurUnit && curHex.HasTown)
-            {
-                if (curHex.Town != null)
-                    gameMgr.SetupCurrentTown(curHex.Town);
-            }
-        }
     }
 
     public void UnitInit(GameManager gameMgr, Faction fact, LandUnitData data)

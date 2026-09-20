@@ -399,7 +399,9 @@ public class GameManager : MonoBehaviour
         {
             foreach (Town town in factions[i].Towns)
             {
-                GenerateLandUnit(factions[i], town.CurHex, 4, false); //Tropical Indian
+                int id = factions[i].IsTropicalNatives ? 4 : 3;  //Tropical or Plain Indians
+
+                GenerateLandUnit(factions[i], town.CurHex, id, false);
             }
         }
     }

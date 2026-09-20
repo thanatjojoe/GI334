@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 
 public enum UnitType
 {
@@ -100,6 +101,15 @@ public class Unit : MonoBehaviour, IPointerClickHandler
         if (isMoving == true)
         {
             MoveToHex();
+        }
+
+        if (Keyboard.current.enterKey.wasPressedThisFrame)
+        {
+            if (this == gameMgr.CurUnit && curHex.HasTown)
+            {
+                if (curHex.Town != null)
+                    gameMgr.SetupCurrentTown(curHex.Town);
+            }
         }
     }
 
