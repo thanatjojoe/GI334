@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LandUnitData
   unitName: Tropical Indians
   landUnitType: 4
-  strength: 2
+  strength: 1
   movePointMax: 3
   visualRange: 1
-  unitIcon: {fileID: 21300000, guid: 0ecaa1dda51eb554cb76809fed0abf6d, type: 3}
+  unitIcon: {fileID: 21300000, guid: e16185f6cbe84a5429778cdbcd92b8ea, type: 3}
   armed: 0
   hasMusket: 0
   hasHorse: 0

@@ -15,7 +15,17 @@ public enum Nation
     Aztec,
     Huron,
     Maya,
-    Inca
+    Inca,
+    Wampanoag,
+    Narragansett,
+    Pueblo,
+    LenniLenape,
+    Powhatan ,
+    Taino,
+    Ottawa
+    
+    
+    
 }
 
 public class Faction : MonoBehaviour

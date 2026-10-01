@@ -15,8 +15,8 @@ MonoBehaviour:
   unitName: Caravel
   navalUnitType: 0
   strength: 2
-  movePointMax: 4
+  movePointMax: 6
   visualRange: 1
-  shipIcon: {fileID: 21300000, guid: 8d1c4c24ea393da4a97305a25342f099, type: 3}
+  shipIcon: {fileID: 21300000, guid: a1d5575e7e0e5f34eaa45991c9b907a4, type: 3}
   armed: 0
   cargoHoldNum: 2

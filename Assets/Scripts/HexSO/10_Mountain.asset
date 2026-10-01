@@ -15,10 +15,10 @@ MonoBehaviour:
   hexName: Mountains
   type: 10
   terrainSprites:
-  - {fileID: 21300000, guid: 9a08f1af3869dbf429e9298683d3761d, type: 3}
-  - {fileID: 21300000, guid: 384cc6fe0178965418a256d2909accd8, type: 3}
-  - {fileID: 21300000, guid: fba992e2ed6a5d64bb916bbe1156f0ce, type: 3}
-  - {fileID: 21300000, guid: ad75da596e712bc47a9d5ad14b3e357e, type: 3}
+  - {fileID: 21300000, guid: eb5f0ad81caa1254b97b0a75f239903f, type: 3}
+  - {fileID: 21300000, guid: eb5f0ad81caa1254b97b0a75f239903f, type: 3}
+  - {fileID: 21300000, guid: eb5f0ad81caa1254b97b0a75f239903f, type: 3}
+  - {fileID: 21300000, guid: eb5f0ad81caa1254b97b0a75f239903f, type: 3}
   forestSprites: []
   resourceYield: 
   moveCost: 3

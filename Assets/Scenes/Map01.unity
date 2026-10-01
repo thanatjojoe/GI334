@@ -3194,9 +3194,20 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f74c7a7c9bed7d74db0ba2de57160977, type: 2}
   - {fileID: 11400000, guid: 5e5888ebd0846cd4f9c4e795ffb1d6d5, type: 2}
   - {fileID: 11400000, guid: eca9540f40838db4eacd0db7e44a5b44, type: 2}
+  - {fileID: 11400000, guid: cb9ee5e011635f74eb708aef82c6335d, type: 2}
+  - {fileID: 11400000, guid: 003f61144bb370e4499b1ce07ecb86e4, type: 2}
+  - {fileID: 11400000, guid: 5e523b0fc4a7aa04791de2b8480e6c2e, type: 2}
+  - {fileID: 11400000, guid: c1328b01ffb28c54096deb8b18c1e642, type: 2}
+  - {fileID: 11400000, guid: f47d85ee48df5374aa63daada721b76b, type: 2}
+  - {fileID: 11400000, guid: ac02cc3168484b1418f4f3b0caad9d82, type: 2}
+  - {fileID: 11400000, guid: 21717cc148a4b854aa0a1201b852fc15, type: 2}
   navalUnitData:
   - {fileID: 11400000, guid: c2b629827c9821d4185b71e921d8e2b9, type: 2}
+  - {fileID: 11400000, guid: 10e86de08777425429fea41d8713cc06, type: 2}
+  - {fileID: 11400000, guid: daef76fa7ba0a954d8ccb37090b85e17, type: 2}
   - {fileID: 11400000, guid: 7a2216c04fddf454f9d2e84a0c848308, type: 2}
+  - {fileID: 11400000, guid: fae7285a98da093448abd3c2357b2625, type: 2}
+  - {fileID: 11400000, guid: c7ee085ba6badb94981f18d4b7ab2ba4, type: 2}
   playerTurn: 1
   gameTurn: 1
   nativeTownNum: 0
